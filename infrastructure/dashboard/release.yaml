@@ -12,3 +12,6 @@ spec:
         name: kubernetes-dashboard
         namespace: kubernetes-dashboard
   interval: 10m
+  values:
+    metricsScraper:
+      enabled: false

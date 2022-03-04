@@ -1,0 +1,13 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: dojo-user
+  namespace: kubernetes-dashboard
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: dashboard-access
+  namespace: kubernetes-dashboard
+subjects:
+- kind: Group
+  name: c0c1d7fb-8fa5-4c49-8447-e7b13712363e
