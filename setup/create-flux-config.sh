@@ -1,0 +1,11 @@
+az k8s-configuration flux create \
+    -g aoc-dojo \
+    -c dojo-cluster \
+    -n dojo-flux \
+    --namespace dojo-flux\
+    -t managedClusters \
+    --scope cluster \
+    -u git@github.com:aoc-dojo/cluster.git \
+    --branch master  \
+    --kustomization name=infra path=./infrastructure prune=true \
+    --kustomization name=apps path=./apps/staging prune=true dependsOn=["infra"]
