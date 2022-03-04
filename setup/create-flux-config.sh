@@ -1,8 +1,8 @@
 az k8s-configuration flux create \
     -g aoc-dojo \
     -c dojo-cluster \
-    -n dojo-flux \
-    --namespace dojo-flux\
+    -n aoc-dojo-cluster \
+    --namespace flux-system\
     -t managedClusters \
     --scope cluster \
     -u git@github.com:aoc-dojo/cluster.git \
