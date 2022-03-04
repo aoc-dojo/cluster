@@ -11,3 +11,4 @@ spec:
         kind: HelmRepository
         name: kubernetes-dashboard
         namespace: kubernetes-dashboard
+  inerval: 10m
