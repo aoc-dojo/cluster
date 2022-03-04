@@ -1,13 +1,11 @@
-kind: RoleBinding
+kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: kube-system-user-read
-  namespace: kube-system
+  name: dojo-user-read
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
   name: view
 subjects:
 - kind: Group
-  namespace: kube-system
   name: c0c1d7fb-8fa5-4c49-8447-e7b13712363e
