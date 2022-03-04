@@ -2,10 +2,12 @@ az k8s-configuration flux create \
     -g aoc-dojo \
     -c dojo-cluster \
     -n aoc-dojo-cluster \
-    --namespace flux-system\
+    --namespace flux-system \
     -t managedClusters \
     --scope cluster \
     -u git@github.com:aoc-dojo/cluster.git \
     --branch master  \
+    --interval 1m \
+    --timeout 1m \
     --kustomization name=infra path=./infrastructure prune=true \
     --kustomization name=apps path=./apps prune=true dependsOn=["infra"]
