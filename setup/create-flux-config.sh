@@ -8,4 +8,4 @@ az k8s-configuration flux create \
     -u git@github.com:aoc-dojo/cluster.git \
     --branch master  \
     --kustomization name=infra path=./infrastructure prune=true \
-    --kustomization name=apps path=./apps/staging prune=true dependsOn=["infra"]
+    --kustomization name=apps path=./apps prune=true dependsOn=["infra"]
