@@ -4,10 +4,10 @@ metadata:
   name: dojo-user
 rules:
   - verbs:
-    - get
-    - list
-    - watch
-  apiGroups:
-    - ''
-  resources:
-    - services/proxy
+      - get
+      - list
+      - watch
+    apiGroups:
+      - ''
+    resources:
+      - services/proxy
