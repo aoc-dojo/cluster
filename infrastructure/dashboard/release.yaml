@@ -14,4 +14,4 @@ spec:
   interval: 10m
   values:
     metricsScraper:
-      enabled: false
+      enabled: true
