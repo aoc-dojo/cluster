@@ -14,4 +14,8 @@ spec:
         name: bitnami
         namespace: flux-system
       version: "9.1.12"
+  values:
+  service:
+    annotations:
+      service.beta.kubernetes.io/azure-dns-label-name: aoc-dojo
   interval: 1h0m0s
